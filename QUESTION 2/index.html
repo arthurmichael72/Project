@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .form-div{margin-top: 100px;
+        margin-left: 600px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="form-div">
+    <form action=""> 
+        HTML Score: <input type="text" id="html" placeholder="html">
+        <br><br>
+        CSS Score: <input type="text" id="css" placeholder="css">
+        <br><br>
+        JAVASCRIPT Score: <input type="text" id="javascript" placeholder="javascrip">
+        <br><br>
+
+        <input type="submit" value="Average" onclick="average()">
+    </form>
+</div>
+
+<script>
+        function average(){
+            var html = document.getElementById("html").value;
+            var css = document.getElementById("css").value;
+            var javascript = document.getElementById("javascript").value;
+
+            var average = parseInt(html) + parseInt(css) + parseInt(javascript);
+            var results = average / 3;
+
+            alert('Your average score is' + " " + results);
+        }
+    </script>
+    
+</body>
+</html>
